@@ -1,14 +1,18 @@
 def bubble_sort(values)
-  index = 0
-  while (index < (values.length - 1)) do
-    if values[index] > values[index + 1]
-      temp = values[index + 1]
-      values[index + 1] = values[index]
-      values[index] = temp
+  pass = 1
+  while pass < values.length do
+    index = 0
+    while (index < (values.length - 1)) do
+      if values[index] > values[index + 1]
+        temp = values[index + 1]
+        values[index + 1] = values[index]
+        values[index] = temp
+      end
+      index += 1
     end
-    index += 1
+    pass += 1
+    p values
   end
-  p values
 end
 
-bubble_sort([4,3,78,2,0,2])
+bubble_sort([5,4,3,2,1,0])
